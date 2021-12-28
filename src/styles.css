@@ -1,3 +1,11 @@
+.tods-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: space-around;
+  max-width: 900px;
+  border: 1px solid red;
+}
 .todo {
   display: flex;
   justify-content: space-between;
@@ -7,6 +15,11 @@
   border-radius: 8px;
   margin: 8px;
   padding: 8px;
+}
+
+.todo-completed {
+  color: green;
+  text-decoration: line-through;
 }
 
 .todo-content_wrapper {
@@ -31,4 +44,19 @@
   /* height: 16px; */
   background-color: orange;
   font-size: 0.8rem;
+}
+
+button {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  margin: 4px;
+  background-color: cornflowerblue;
+  cursor: pointer;
+  transition: all 250ms ease;
+}
+
+button:hover {
+  box-shadow: 0 0 2px 0 gray;
+  background-color: blueviolet;
 }
