@@ -1,0 +1,34 @@
+.todo {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  border: 1px solid blueviolet;
+  width: 250px;
+  border-radius: 8px;
+  margin: 8px;
+  padding: 8px;
+}
+
+.todo-content_wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.todo-id {
+  margin-right: 8px;
+}
+
+.todo-checkbox {
+  margin-right: 8px;
+}
+
+.todo-renders_tag {
+  border-radius: 50px;
+  border: 1px solid orangered;
+  color: white;
+  padding: 2px;
+  /* width: 16px; */
+  /* height: 16px; */
+  background-color: orange;
+  font-size: 0.8rem;
+}
