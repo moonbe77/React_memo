@@ -4,12 +4,11 @@ import ToDoList from "./ToDoList";
 
 export default function App() {
   return (
-    
     <div className="App">
       <div> List </div>
-      <ErrorBoundary>
+      {/* <ErrorBoundary> */}
       <ToDoList />
-    </ErrorBoundary>
+      {/* </ErrorBoundary> */}
     </div>
   );
 }
