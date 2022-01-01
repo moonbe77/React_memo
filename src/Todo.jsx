@@ -1,15 +1,20 @@
 import React, { useEffect, useRef, useState } from "react";
+import ErrorBoundary from "./ErrorBoundary";
 
 const ToDo = ({ todo, setComplete, deleteTodo, color }) => {
-  const { id, name, completed } = todo;
+  const { id, name, completed, test} = todo;
   const rendersCounter = useRef(0);
   rendersCounter.current = rendersCounter.current + 1;
 
   const handleCheckbox = () => {
+    // alert('test')
     setComplete(id);
+    throw new Error('Required');
   };
 
   return (
+    <ErrorBoundary>
+
     <div className="todo">
       <div className="todo-content_wrapper">
         {/* <div className="todo-id">{id}</div> */}
@@ -25,17 +30,18 @@ const ToDo = ({ todo, setComplete, deleteTodo, color }) => {
           onChange={handleCheckbox}
           checked={completed}
           name={id}
-        />
+          />
         <button
           style={{
             backgroundColor: color
           }}
           onClick={() => deleteTodo(id)}
-        >
+          >
           🧨
         </button>
       </div>
     </div>
+          </ErrorBoundary>
   );
 };
 
